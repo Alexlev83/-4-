@@ -1,40 +1,56 @@
-﻿// Задача 1. семинар 4  Напишите программу, которая принимает 
-// на вход число (А) и выдаёт сумму чисел от 1 до А.
+// Задача 25. семинар 4  Напишите программу, которая принимает 
+// на вход числа (A и B) и возводит число A в натуральную степень B.
 
-// int GetSum(int num)
+//Console.Write("Введите число A: ");
+//int a = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Введите число B: ");
+//int b = Convert.ToInt32(Console.ReadLine());
+//int step = a;
+//for (int i=1; i < b; i++)
+//{
+   // step = step * a;
+//}
+//Console.WriteLine($"Натуральная степень числа A в степени числа B равна {step}");
+
+// Задача 27. семинар 4  Напишите программу, которая принимает 
+// на вход число и выдаёт сумму цифр в числе.
+
+// Console.WriteLine("введите число");
+// int i = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+
+// while (i > 0)
 // {
-//   int sum = 0;
-//   for(int current = 1; current <= num; current++)
-//     sum = sum + current;
-//   return sum;
-
+// int num = i % 10;
+// i = i / 10;
+// sum = sum + num;
 // }
-// Console.Write("input a number: ");
-// int a = Convert.ToInt32(Console.ReadLine());
-// int res = GetSum(a);
-// Console.WriteLine($"sum of number from 1 to {a} is {res}");
+// Console.WriteLine("сумма всех цифр в числе равна: " + sum);
 
-//Напишите программу, которая принимает на вход число и выдаёт 
-//количество цифр в числе.
+// Задача 29. семинар 4    Напишите программу, которая задаёт массив из 8 элементов 
+// и выводит их на экран.
 
-
-
-// Напишите программу, которая принимает на вход число N и выдаёт 
-// произведение чисел от 1 до N.
-// Task 3. Напишите программу, 
-//которая принимает на вход число N и выдаёт произведение чисел от 1 до N.
-
-// int GetSum(int num)
-// {
-//     int sum = 0;
-
-//     for(int current = 1; current <= num; current++)
-//         sum = sum * current;
-//     return sum;
-// }
-// Console.Write("Input number A: ");
-// int A = Convert.ToInt32(Console.ReadLine());
-
-// int res = GetSum(A);
-// Console.WriteLine($"Sum of numbers from 1 do {A} is {res}");
+void RanArray(int[] number)
+{
+  int lenght = number.Length;
+  int index = 0;
+   while(index < lenght)
+   {
+     number[index] = new Random().Next(1,100);
+      index ++;
+   }
+}
+void PrintArray(int[] num1)
+{
+   int count = num1.Length;
+   int position = 0;
+   while (position < count)
+   {
+      Console.WriteLine(num1[position]);
+      position++;
+   }
+}
+int[] array = new int[8];
+RanArray(array);
+PrintArray(array);
 
